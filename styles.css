@@ -1,4 +1,9 @@
 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
 
 body {
     height: 100vh;
@@ -14,8 +19,3 @@ h2 {
     font-size: 55px;
     text-align:center
   }
-
-  link[rel="icon"] {
-    width: 32px;
-    height: 32px;
-}
