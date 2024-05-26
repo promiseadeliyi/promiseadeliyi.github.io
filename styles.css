@@ -17,8 +17,15 @@ body {
 
 h1 {
     color: #cdc7c7;
-    font-size: 55px;
+    font-size: 3.75em;
     text-align:center;
+
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 1.5em 0 0.5em 3.0em;
+    text-align: left;
+    font-family:'Prata','Times New Roman', Times, serif;
+
 }
 
 /* About Page Stylings */
@@ -51,32 +58,44 @@ h1 {
     object-position: center;
 }
 
-/* Navigation BAR */
+/* Header */
 main{
     padding-top: 3.33em;
     display:flex;
     justify-content: space-between;
+    
     align-items: center;
     padding: 30px 10%;
   }
 
+
+.logo {
+    margin-right: auto;
+    padding-top: 18px;
+}
+
+/* Navigation BAR */
 .navigation-bar {
-    display: inline;
-    text-align: right;
-    margin-top: 50px;
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+    margin-top: 18px;
 }
 
 .navigation-bar ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex; 
+
 }
 
 .navigation-bar li {
     display: inline-block;
-        font-family:'Prata','Times New Roman', Times, serif;
-        font-weight: 500;
-        font-size: 16px;
+    font-family:'Prata','Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 12px;
 }
 
 .navigation-bar a {
@@ -104,8 +123,4 @@ main{
     transition: color 0.3s ease 0s;
 }
 
-.logo {
-    margin-right: auto;
-    padding-top: 18px;
-}
 
