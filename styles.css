@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap'); /* Google Font: Prata */
+
 /* General Webpage Stylings */
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    background-color: #101010 ; 
 }
 
 body {
@@ -16,13 +19,18 @@ body {
 h1 {
     color: #cdc7c7;
     font-size: 55px;
-    text-align:center
+    text-align:center;
 }
 
-
 /* About Page Stylings */
-
-
+.content {
+    color: #cdc7c7;
+    font-size: 35px;
+    text-align: left;
+    margin-left: 200px;
+    padding-top: 8.5em;
+    padding-bottom: 8.5em;
+}
 
 /* Projects Page Stylings */
   #carousel {
@@ -44,10 +52,19 @@ h1 {
     object-position: center;
 }
 
+/* Navigation BAR */
+main{
+    padding-top: 3.33em;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+  }
+
 .navigation-bar {
     display: inline;
     text-align: right;
-    padding-top: 10px;
+    margin-top: 50px;
 }
 
 .navigation-bar ul {
@@ -58,6 +75,9 @@ h1 {
 
 .navigation-bar li {
     display: inline-block;
+        font-family:'Prata','Times New Roman', Times, serif;
+        font-weight: 500;
+        font-size: 16px;
 }
 
 .navigation-bar a {
@@ -77,8 +97,16 @@ h1 {
     color: #101010; 
 }
 
-.content {
-    color: #cdc7c7;
-    font-size: 20px;
-    text-align:center 
+.navlinks {
+    padding: 0px 20px;
 }
+
+.nav__links li a {
+    transition: color 0.3s ease 0s;
+}
+
+.logo {
+    margin-left: auto;
+    order: 3;
+}
+
