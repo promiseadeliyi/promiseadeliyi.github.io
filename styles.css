@@ -19,7 +19,7 @@ h1 {
     color: #cdc7c7;
     font-size: 3.75em;
     line-height: 1.5;
-    margin: 1.5em 0 0 2.4em;
+    margin: 0.9em 0 0 2.4em;
     text-align: left;
     font-family:'Prata','Times New Roman', Times, serif;
 }
@@ -34,6 +34,52 @@ p {
     margin: 0.5em 7.6em 0.5em 7.6em;
     font-family:'Prata','Times New Roman', Times, serif;
 
+}
+
+i {
+    text-align: left;
+    color: #767272;
+    margin-top: 100px;
+}
+
+.inner ul {
+    display: flex;
+    padding: 10em 5em 3em 5em;
+    max-width: 100%;
+    width: 75em;
+    text-align: left;
+    list-style: none;
+    
+    color:#484646;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+.actions {
+    cursor: default;
+    list-style: none;
+    margin-left: 8.5em;
+    padding-left: 0;
+}
+
+.contact-container .actions li {
+    display: inline-block;  
+    font-family:'Prata','Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 15px;
+
+    padding: 10px 20px; 
+    text-decoration: none;
+    background-color: #101010; /* Button background color */
+    color: white; /* Button text color */
+    border: 1px solid #cdc7c7;
+    border-radius: 20px; /* Rounded borders */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 /* Projects Page Stylings */
@@ -66,7 +112,6 @@ main{
     padding: 30px 10%;
   }
 
-
 .logo {
     margin-right: auto;
     padding-top: 18px;
@@ -98,7 +143,7 @@ main{
 
 .navigation-bar a {
     display: inline-block;
-    padding: 10px 20px; /* Adjust padding as needed */
+    padding: 10px 20px; 
     text-decoration: none;
     background-color: #101010; /* Button background color */
     color: white; /* Button text color */
@@ -120,5 +165,6 @@ main{
 .navlinks li a {
     transition: color 0.3s ease 0s;
 }
+
 
 
