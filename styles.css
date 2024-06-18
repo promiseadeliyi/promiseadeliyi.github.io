@@ -83,24 +83,7 @@ i {
 }
 
 /* Projects Page Stylings */
-  #carousel {
-    display: flex;
-    gap: 4vmin;
-    position: absolute;
-    left: 50%;
-    top: 50%;
 
-    padding-bottom: 1000;
-    justify-content: center;
-    align-items: center;
-    height: 1000%;
-}
-#carousel > .carousel-images {
-    width: 40vmin;
-    height: 56vmin;
-    object-fit: cover;
-    object-position: center;
-}
 
 /* Header */
 main{
