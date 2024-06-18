@@ -27,3 +27,50 @@ a {
   color: var(--link-color);
   text-decoration: none;
 }
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  height: 80px;
+}
+
+.left-row img {
+  width: 75px;
+  height: 25px;
+}
+
+nav .left-row a {
+  color: var(--text-color);
+}
+
+nav .right-row a {
+  margin: 30px;
+}
+
+
+/* WELCOME */
+
+.welcome .content .actions a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid var(--link-color);
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: .1s;
+}
+
+.welcome .content .actions a:first-child {
+  color: var(--background-color);
+  background-color: var(--text-color);
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin-right: 25px;
+}
+
+.actions a span {
+  margin-left: 5px;
+}
