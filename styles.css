@@ -1,7 +1,7 @@
 
 /* General Webpage Stylings */
 :root {
-  --text-color: #cdc7c7;
+  --text-color: #e9e2e2;
   --link-color: #dba8d3;
   --background-color:#101010;
 }
@@ -36,16 +36,21 @@ nav {
   align-items: center;
   height: 80px;
 }
+  /* left component */
+nav .left-row a {
+  color: var(--text-color);
+  border:none;
+}
 
 .left-row img {
   width: 75px;
   height: 25px;
 }
 
-nav .left-row a {
-  color: var(--text-color);
+.logo-image img {
+  color: initial; 
 }
-
+  /* right component */
 nav .right-row a {
   margin: 30px;
 }
