@@ -130,5 +130,7 @@ nav .right-row a {
 @media (max-width: 475px) {
   .headshot{
     display: none;
+    padding: 20px;
+    height:160px;
   }
 }
