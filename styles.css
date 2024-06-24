@@ -180,8 +180,17 @@ nav .right-row a {
     height: 160px;
   }
 
+    /*Skills Section */
   .headshot img{
     width: 100px;
+  }
+
+  .skills-section {
+    padding: 0 20px;
+  }
+
+  .skills-section .cells .cell span {
+    font-size: 16px;
   }
 }
 
@@ -202,7 +211,7 @@ nav .right-row a {
   margin-bottom: 20px;
 }
 
-.skills-section .frontend-text p {
+.skills-section .text p {
   text-align: left;
   font-size: 20px;
   color: var(--link-color);
