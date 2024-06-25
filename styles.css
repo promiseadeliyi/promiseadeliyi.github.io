@@ -37,8 +37,8 @@ nav {
   height: 80px;
 }
   /* left component */
-nav .left-row a {
-  color: var(--text-color);
+  nav .left-row a {
+  display: none;
   border:none;
 }
 
@@ -92,6 +92,8 @@ nav .right-row a {
       margin: 15px;  
       overflow: auto;
   }
+
+  
 }
 
 /* WELCOME SECTION */
@@ -248,3 +250,71 @@ nav .right-row a {
   font-size: 18px;
 }
 
+
+/* WORK SECTION */
+.work-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+.work-section h2 {
+  text-align: center;
+  font-size: 35px;
+  color: var(--link-color);
+}
+
+.work-section p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.work-section .carousel p {
+  text-align: left;
+  font-size: 12px;
+  color: #ceb1ca;
+}
+
+
+.work-section .cells {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/*CAROUSEL*/
+.carousel {
+  width: 1340px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 10px;
+}
+
+.slides::-webkit-scrollbar {
+  width: 1px;
+  height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+  background: var(--link-color);
+  border-radius: 5px;
+}
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.carousel .img{
+  position: relative;
+  object-fit: cover;
+  width: 780px;
+  height: 350px;
+}
