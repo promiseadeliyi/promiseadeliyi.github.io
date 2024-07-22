@@ -21,6 +21,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     overflow-x: hidden;
+    background-image: linear-gradient(180deg, var(--background-color) 25%,hsl(310, 10%, 24%) 35%,hsl(309, 18%, 58%) 50%, var(--background-color) 75%);
 }
 
 a {
@@ -34,7 +35,7 @@ nav {
   justify-content: space-between;
   padding: 2rem;
   align-items: center;
-  height: 100px;
+  height: 120px;
 }
   /* left component */
   nav .left-row a {
@@ -139,12 +140,6 @@ nav {
   flex: 8;
 }
 
-.welcome .content h1{
-  font-size: 50px;
-  margin-bottom: 10px;
-  color:var(--link-color);
-}
-
 .welcome .headshot {
   flex: 2;
 }
@@ -190,18 +185,22 @@ nav {
   margin-left: 5px;
 }
 
-@media (max-width: 664px) {
-  .welcome .content h1{
-    font-size: 30px;
-  } 
+@media (min-width: 664px) {
+  #cta {
+    display:none;
+  }
+
 }
 
 @media (max-width: 592px) {
+
   /* Welcome Section */
   .welcome {
     flex-direction: column-reverse;
     text-align: center;
   }
+
+  
 
   .headshot{
     display: flex;
