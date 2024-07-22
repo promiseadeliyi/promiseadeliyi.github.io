@@ -59,7 +59,8 @@ nav {
   nav .resume-cta a {
       padding: 5px 10px;
       border: 2px solid var(--link-color);
-      color: var(--link-color);
+      color: var(--background-color);
+      background-color: var(--link-color);
       border-radius: 5px;
       margin-right: 10px;
       margin-bottom: 10px;
@@ -68,8 +69,8 @@ nav {
   }
 
   nav .resume-cta a:hover {
-      background-color: var(--link-color);
-      color: var(--background-color);
+      background-color: var(--background-color);
+      color: var(--link-color);
   }
 
   /* menu-bar */
@@ -82,12 +83,17 @@ nav {
 }
 
 @media (max-width: 475px) {
+
+  nav {
+    margin-right: 0.1rem;
+  }
+
     .right-row {
         display: none;
         flex-direction: column;
         background-color: var(--background-color);
         
-        position: absolute;
+        position: fixed;
         top: 80px;
         right: 15px; 
         width: 20%; 
@@ -100,6 +106,12 @@ nav {
         display: flex;
     }
 
+    nav .right-row a {
+      margin: 15px;  
+      overflow: auto;
+      padding: 0px;
+  }
+
     .resume-cta {
       display: none;
     }
@@ -108,12 +120,6 @@ nav {
         display: block;
         text-align: center;
     }
-
-    nav .right-row a {
-      margin: 15px;  
-      overflow: auto;
-  }
-
   
 }
 
