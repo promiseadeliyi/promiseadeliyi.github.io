@@ -21,7 +21,6 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     overflow-x: hidden;
-    background-image: linear-gradient(180deg, var(--background-color) 25%,hsl(310, 10%, 24%) 35%,hsl(309, 18%, 58%) 50%, var(--background-color) 75%);
 }
 
 a {
