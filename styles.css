@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: var(--background-color) ;
+  background-color:var(--text-color) ;
   color: var(--text-color);
   font-family: 'Rubik', sans-serif;
   margin: 1%;
@@ -35,13 +35,13 @@ body {
   align-items: center;
 
   border-radius: 12px;
-  border: 2px solid var(--text-color);
+  border: 1px dotted var(--background-color);
 }
 
 .work-experience {
   grid-column: 1 / 5;  /* columns 1 to 4 */
   grid-row: 1 / 5;     /* rows 1 to 3 */
-  background-color:#ebdbcb;
+  background-color:	#fff4f1;
 }
 
 .about-me {
@@ -54,18 +54,21 @@ body {
   grid-column: 5 / 10; 
   grid-row: 3 / 5;
   background-color: #F1D3DF;    
+  color: #614b49;
 }
 
 .contact {
   grid-column: 10 / 13; 
   grid-row: 3 / 5;    
-  background-color: #97818a;    
+  background-color: #614b49;    
+  color: white;
 }
 
 .skills {
   grid-column: 1 / 8; 
   grid-row: 5 / 7;   
-  background-color: #97818a;  
+  background-color: #614b49;  
+  color: white;
 }
 
 .blog {
