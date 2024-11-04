@@ -38,6 +38,23 @@ body {
   border: 1px dotted var(--background-color);
 }
 
+.item:hover {
+  animation-name: zoom-in;
+  animation-duration: 1.50s;
+  animation-delay: 20ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes zoom-in {
+  from {
+    margin: 0px;
+  }
+  to {
+    margin: 20px;
+  }
+}
+
 .work-experience {
   grid-column: 1 / 5;  /* columns 1 to 4 */
   grid-row: 1 / 5;     /* rows 1 to 3 */
@@ -55,7 +72,9 @@ body {
   grid-row: 3 / 5;
   background-color: #F1D3DF;    
   color: #614b49;
+  transition-delay: 2s;
 }
+
 
 .contact {
   grid-column: 10 / 13; 
