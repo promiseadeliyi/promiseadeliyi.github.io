@@ -21,10 +21,12 @@ body {
   background-color: #1b1b1b;
 }
 
+/* HOME PAGE */
+
 a {
   color: #5c5c60;;
   text-decoration: none;
-  border:var(--guidelines);
+  /* border:var(--guidelines); */
 }
 
 #nav_bar_wrapper {
@@ -49,7 +51,7 @@ nav {
   justify-content: space-between;
   align-items: flex-end;
 
-  border:var(--guidelines);
+  /* border:var(--guidelines); */
 }
 
 #nav_bar_right {
@@ -70,7 +72,7 @@ nav {
   padding-left: 120px;
   padding-right: 120px;
 
-  border:var(--guidelines);
+  /* border:var(--guidelines); */
 
   font-family: var(--font-family);
   font-weight: 300;
@@ -88,7 +90,7 @@ nav {
   padding-left: 64px;
   padding-right: 64px;
 
-  border:var(--guidelines); 
+  /* border:var(--guidelines);  */
 }
 
 #name_title {
@@ -96,7 +98,7 @@ nav {
   align-items: flex-end;
   margin-left: -8px;
 
-  border:var(--guidelines); 
+  /* border:var(--guidelines);  */
 }
 
 #name_title h1 {
@@ -106,7 +108,7 @@ nav {
   color:rgb(56, 54, 54);
   margin-bottom: 14px;
 
-  border:var(--guidelines); 
+  /* border:var(--guidelines);  */
 }
 
 #welcome_description {
@@ -118,7 +120,7 @@ nav {
   color:#5c5c60;
   line-height: 22px;
 
-  border:var(--guidelines); 
+  /* border:var(--guidelines);  */
 }
 
 .flower {
@@ -202,24 +204,35 @@ nav {
   100% { transform: rotate(360deg); } 
 }
 
+
+/* ABOUT PAGE */
+
 @media (max-width: 768px) {
   /* mobile screens */
   #nav_bar_wrapper {
     padding: 20px 40px;
   }
 
+  #nav_bar_left {
+    display:none;
+  }
+
+
   nav {
     padding: 20px;
+    justify-content: center;
   }
 
   #hero {
     padding-left: 20px;
     padding-right: 20px;
-    margin-top: 60px;
+    margin-top: 90px;
   }
 
   #hero_introduction {
     max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   #name_title h1 {
@@ -227,23 +240,9 @@ nav {
   }
 
   #welcome_description {
-    max-width: none;
+    max-width: 82%;
   }
 
-  .flower {
-    width: 100px;
-    height: 100px;
-  }
-
-  .flower > .flower-leaf {
-    width: 25%;
-    height: 25%;
-  }
-
-  .flower > .flower-core {
-    width: 10%;
-    height: 10%;
-  }
 }
 
 @media (max-width: 1024px) and (orientation: landscape) {
@@ -262,30 +261,8 @@ nav {
     margin-top: 60px;
   }
 
-  #hero_introduction {
-    max-width: none;
-  }
-
   #name_title h1 {
     font-size: 48px;
   }
 
-  #welcome_description {
-    max-width: none;
-  }
-
-  .flower {
-    width: 150px;
-    height: 150px;
-  }
-
-  .flower > .flower-leaf {
-    width: 37.5%;
-    height: 37.5%;
-  }
-
-  .flower > .flower-core {
-    width: 12.5%;
-    height: 12.5%;
-  }
 }
