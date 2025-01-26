@@ -17,6 +17,10 @@ body {
   background-color: #fefffe;
 }
 
+.blog_page {
+  background-color: #1b1b1b;
+}
+
 a {
   color: #5c5c60;;
   text-decoration: none;
@@ -196,4 +200,92 @@ nav {
 
 @keyframes rotate {
   100% { transform: rotate(360deg); } 
+}
+
+@media (max-width: 768px) {
+  /* mobile screens */
+  #nav_bar_wrapper {
+    padding: 20px 40px;
+  }
+
+  nav {
+    padding: 20px;
+  }
+
+  #hero {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 60px;
+  }
+
+  #hero_introduction {
+    max-width: none;
+  }
+
+  #name_title h1 {
+    font-size: 40px;
+  }
+
+  #welcome_description {
+    max-width: none;
+  }
+
+  .flower {
+    width: 100px;
+    height: 100px;
+  }
+
+  .flower > .flower-leaf {
+    width: 25%;
+    height: 25%;
+  }
+
+  .flower > .flower-core {
+    width: 10%;
+    height: 10%;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  /* ipad screens*/
+  #nav_bar_wrapper {
+    padding: 20px 40px;
+  }
+
+  nav {
+    padding: 20px;
+  }
+
+  #hero {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 60px;
+  }
+
+  #hero_introduction {
+    max-width: none;
+  }
+
+  #name_title h1 {
+    font-size: 48px;
+  }
+
+  #welcome_description {
+    max-width: none;
+  }
+
+  .flower {
+    width: 150px;
+    height: 150px;
+  }
+
+  .flower > .flower-leaf {
+    width: 37.5%;
+    height: 37.5%;
+  }
+
+  .flower > .flower-core {
+    width: 12.5%;
+    height: 12.5%;
+  }
 }
