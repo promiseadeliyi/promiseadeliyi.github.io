@@ -1,13 +1,16 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
+@import "modern-normalize";
+
 :root {
   --font-family: 'Manrope', sans-serif;
-  --body-font-size: 16px;
+  --body-font-size: 1rem;
   --fancy-font: 'Tangerine', serif;
   --guidelines: #cb0d0d 2px solid; 
   --accent-color: #ee4cc8;
+  --light-accent: #d395c5;
 }
 
 html {
@@ -121,14 +124,14 @@ nav {
 
 #name_title h1 {
   font-family: var(--fancy-font);
-  font-size: 64px;
+  font-size: 4rem;
   font-weight: 600;
   color:var(--accent-color);
   margin-bottom: 13px;
 }
 
 #welcome_description {
-  max-width: 50%;
+  max-width: 50ch;
 
   font-family: var(--font-family);
   font-weight: 300;
@@ -290,7 +293,7 @@ img {
   }
 
   #name_title h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 
   #welcome_description {
@@ -316,7 +319,7 @@ img {
   }
 
   #name_title h1 {
-    font-size: 48px;
+    font-size: 3rem;
   }
 
 }
