@@ -1,15 +1,16 @@
+@import "modern-normalize";
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-@import "modern-normalize";
 
 :root {
   --font-family: 'Manrope', sans-serif;
   --body-font-size: 1rem;
   --fancy-font: 'Tangerine', serif;
   --guidelines: #cb0d0d 2px solid; 
-  --accent-color: #ee4cc8;
+  --accent-color: #e072c7;
   --light-accent: #d395c5;
 }
 
@@ -26,9 +27,20 @@ body {
 }
 
 .blog_page {
-  background-color: #1b1b1b;
+  background-color: #181717;
 }
 
+#nav_bar_wrapper_2 {
+  display: flex;
+  z-index: 9;
+  justify-content: flex-start;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  position:fixed;
+  inset: 0% 0% auto;
+  background-color: #181717;
+}
 /* HOME PAGE */
 
 a {
@@ -127,11 +139,11 @@ nav {
   font-size: 4rem;
   font-weight: 600;
   color:var(--accent-color);
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 }
 
 #welcome_description {
-  max-width: 50ch;
+  max-width: 55ch;
 
   font-family: var(--font-family);
   font-weight: 300;
