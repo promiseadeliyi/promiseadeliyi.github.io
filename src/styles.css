@@ -22,7 +22,6 @@ body {
   background-color: #fffeff;
   min-height: 100%;
   margin: 0;
-  margin: 5px;
   /* adding a magazine, esque feel to it */
 }
 
@@ -192,6 +191,27 @@ img {
   display: inline-block;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 275px;
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: var(--body-font-size);
+  background-color: #181717;
+  margin-top: 120px;
+  position: relative;
+}
+
+.footer-transition-fade {
+  background-image: linear-gradient(to bottom, #181717 34%,#952795);
+  pointer-events: none;
+  height: 25%;
+  position: absolute;
+  inset: 2300px 0 0 0;
+}
+
 .flower {
   width: 200px;
   height: 200px;
@@ -215,7 +235,7 @@ img {
   display: inline-block;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: var(--light-accent);
   border-radius: 60%;
   position: relative;
   left: 50%;
@@ -250,7 +270,7 @@ img {
   position: absolute;
   width: 5%;
   height: 5%;
-  background-color: black;
+  background-color: #fffeff;
   /* the vertical center of core is at the bottom of leaf-1, so top is 50% - 2.5% = 47.5% */
   top: 47.5%;
   /* the horizontal center of core is at the 3/4 of leaf-1, so it is 50% * 3 / 4 - 2.5% = 37.5% - 2.5% = 35% */
@@ -311,8 +331,8 @@ img {
   #welcome_description {
     max-width: 82%;
   }
-
 }
+
 
 @media (max-width: 1024px) and (orientation: landscape) {
   /* ipad screens*/
