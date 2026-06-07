@@ -258,7 +258,7 @@ nav a {
 }
 
 .proj_arrow {
-  font-size: 1px;
+  font-size: 1rem;
   color: var( --bright-color);
   transition: transform 0.2s;
   display: inline-block;
