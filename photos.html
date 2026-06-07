@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Through My Lens — Promise Adeliyi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Manrope:wght@200..800&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: rgb(0 0 0/1);
+        --fg: #f0ece4;
+        --fg-muted: #aaa;
+        --fg-dim: #bbb;
+        --accent: #f0ece4;
+        --font-display: 'Cormorant Garamond', serif;
+        --font-body: 'Manrope', sans-serif;
+        --font-script: 'Tangerine', cursive;
+        --font-editorial: 'Cormorant Garamond', serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--fg);
+        font-family: var(--font-body);
+        font-weight: 300;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* NAV */
+      #nav_bar_wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        mix-blend-mode: difference;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+
+      #nav_bar_left a {
+        font-family: var(--font-editorial);
+        font-size: 1.50rem;
+        font-weight: 400;
+        color: var(--fg);
+        text-decoration: none;
+        letter-spacing: 0.02em;
+      }
+
+      #nav_back a {
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        font-weight: 300;
+        color: var(--fg-muted);
+        text-decoration: none;
+        letter-spacing: 0.02em;
+        transition: color 0.2s;
+      }
+
+      #nav_back a:hover {
+        color: var(--fg);
+      }
+
+      /* HERO */
+      .gallery_hero {
+        padding: 8rem 2rem 4rem;
+        max-width: 680px;
+      }
+
+      .gallery_hero h1 {
+        font-family: var(--font-display);
+        font-size: clamp(3rem, 8vw, 5.5rem);
+        font-weight: 300;
+        line-height: 1.05;
+        letter-spacing: -0.01em;
+        margin-bottom: 1rem;
+      }
+
+      .gallery_hero h1 em {
+        font-style: italic;
+        color: var(--fg-muted);
+      }
+
+      .gallery_hero p {
+        font-size: 0.85rem;
+        font-weight: 300;
+        color: var(--fg-muted);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      /* DIVIDER */
+      .divider {
+        width: 100%;
+        height: 1px;
+        background: var(--fg-dim);
+        margin: 0 2rem;
+        width: calc(100% - 4rem);
+      }
+
+      /* GALLERY */
+      .gallery_wrapper {
+        padding: 3rem 2rem 6rem;
+        columns: 2;
+        column-gap: 1rem;
+      }
+
+      @media (max-width: 600px) {
+        .gallery_wrapper {
+          columns: 1;
+        }
+      }
+
+      @media (min-width: 1100px) {
+        .gallery_wrapper {
+          columns: 3;
+        }
+      }
+
+      .photo_item {
+        break-inside: avoid;
+        margin-bottom: 1rem;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .photo_item img {
+        width: 100%;
+        display: block;
+        filter: grayscale(15%);
+        transition: filter 0.4s ease, transform 0.5s ease;
+      }
+
+      .photo_item:hover img {
+        filter: grayscale(0%);
+        transform: scale(1.02);
+      }
+
+      /* PLACEHOLDER CARDS (for before real photos are added) */
+      .photo_placeholder {
+        background: var(--fg-dim);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .photo_placeholder span {
+        font-size: 0.7rem;
+        color: var(--fg-muted);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      /* LIGHTBOX */
+      .lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(10, 10, 10, 0.95);
+        z-index: 200;
+        align-items: center;
+        justify-content: center;
+        cursor: zoom-out;
+      }
+
+      .lightbox.active {
+        display: flex;
+      }
+
+      .lightbox img {
+        max-width: 90vw;
+        max-height: 90vh;
+        object-fit: contain;
+        animation: fadeIn 0.2s ease;
+      }
+
+      .lightbox_close {
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+        font-size: 0.8rem;
+        font-weight: 300;
+        color: var(--fg-muted);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+
+      .lightbox_close:hover {
+        color: var(--fg);
+      }
+
+      /* FOOTER */
+      .gallery_footer {
+        padding: 2rem;
+        border-top: 1px solid var(--fg-dim);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .gallery_footer a {
+        font-size: 0.8rem;
+        font-weight: 300;
+        color: var(--fg-muted);
+        text-decoration: none;
+        letter-spacing: 0.04em;
+        transition: color 0.2s;
+      }
+
+      .gallery_footer a:hover {
+        color: var(--fg);
+      }
+
+      .gallery_footer span {
+        font-size: 0.8rem;
+        color: var(--fg-dim);
+        letter-spacing: 0.04em;
+      }
+
+      /* ANIMATIONS */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.97); }
+        to { opacity: 1; transform: scale(1); }
+      }
+
+      .photo_item {
+        opacity: 0;
+        animation: fadeIn 0.5s ease forwards;
+      }
+
+      .photo_item:nth-child(1) { animation-delay: 0.05s; }
+      .photo_item:nth-child(2) { animation-delay: 0.1s; }
+      .photo_item:nth-child(3) { animation-delay: 0.15s; }
+      .photo_item:nth-child(4) { animation-delay: 0.2s; }
+      .photo_item:nth-child(5) { animation-delay: 0.25s; }
+      .photo_item:nth-child(6) { animation-delay: 0.3s; }
+      .photo_item:nth-child(7) { animation-delay: 0.35s; }
+      .photo_item:nth-child(8) { animation-delay: 0.4s; }
+      .photo_item:nth-child(9) { animation-delay: 0.45s; }
+    </style>
+  </head>
+  <body>
+
+    <!-- NAV -->
+    <div id="nav_bar_wrapper">
+      <nav>
+        <div id="nav_bar_left">
+          <a href="/">2026.</a>
+        </div>
+        <div id="nav_back">
+          <a href="/">← back</a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- HERO -->
+    <div class="gallery_hero">
+      <h1>Through<br><em>My Lens</em></h1>
+      <p>A visual diary of moments I found worth keeping.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- GALLERY -->
+    <div class="gallery_wrapper">
+
+      <div class="photo_item" onclick="openLightbox(this)">
+        <img src="/images/flights.jpg" alt="brief description">
+      </div>
+
+      <div class="photo_item" onclick="openLightbox(this)">
+        <img src="/images/garden.jpg" alt="brief description">
+      </div>
+
+      <div class="photo_item" onclick="openLightbox(this)">
+        <img src="/images/carousel.jpg" alt="brief description">
+      </div>
+
+      <div class="photo_item" onclick="openLightbox(this)">
+        <img src="/images/almond_store.jpg" alt="brief description">
+      </div>
+
+      <div class="photo_item" onclick="openLightbox(this)">
+        <img src="/images/center.jpg" alt="brief description">
+      </div>
+
+      <div class="photo_item" onclick="openLightbox(this)">
+        <img src="/images/busan.jpg" alt="brief description">
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="gallery_footer">
+      <a href="/">← Promise Adeliyi</a>
+      <span>digital photography</span>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <div class="lightbox_close" onclick="closeLightbox()">close</div>
+      <img id="lightbox_img" src="" alt="">
+    </div>
+
+    <script>
+      function openLightbox(item) {
+        const img = item.querySelector('img');
+        if (!img) return; // no lightbox for placeholders
+        document.getElementById('lightbox_img').src = img.src;
+        document.getElementById('lightbox_img').alt = img.alt;
+        document.getElementById('lightbox').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    </script>
+
+  </body>
+</html>

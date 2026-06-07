@@ -7,100 +7,128 @@
 
     <title>Promise Adeliyi</title>
 
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Manrope:wght@200..800&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./src/styles.css" type="text/css" title="Styles for Webpage">
     <link rel="icon" href="/images/crystal.webp" type="image/x-icon" style="width: 32px; height: 32px;">
   </head>
+
   <body>
-    <!-- idea to make it a github checker calendar thing maybe -- knowing -->
+        <!-- Navbar -->
+        <div id="nav_bar_wrapper">
+          <nav>
+            <div id="nav_bar_left">
+              <a href="/" aria-current="page">2026.</a>
+            </div>
+          </nav>
+        </div>
 
-    <!-- Navbar -->
-    <div id="nav_bar_wrapper">
-      <nav>
-          <div id="nav_bar_left">
-            <a href="/" aria-current="page">2025.</a>
+        <div id="side_nav">
+          <a href="#">Intro</a>
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+        </div>
+
+        <!-- Hero -->
+        <div class="hero">
+          <div id="introduction">
+            <div id="name_title">
+              <h1>Promise Adeliyi</h1>
+            </div>
+            <div id="welcome_description">
+              <p>Hello! I'm a designer and developer that enjoys creating experiences that center people first.<span id="star">𓇼</span></p>
+            </div>
           </div>
-          <div id="nav_bar_right">
-            <a href="/">Work</a>
-            <a href="/about.html">About</a>
-            <a href="/blog.html">Blog</a>
-        </div>
-      </nav>
-    </div>
 
-    <div class="hero">
-      <div id="hero_introduction">
-        <div id="name_title">
-          <h1>Promise Adeliyi</h1>
-        </div>
-        <div id="welcome_description">
-          Weaving together my love for the web, creating a satisfying user experience, and building my skills as a developer. A forever learner 𓇼
-        </div>
-      </div>
-      <div class="project_gallery">
-        <!-- FIRST -->
-        <div class="columns"> 
-          <a href="https://github.com/promiseadeliyi/algorithmic-art" target="_blank" class="icard">
-            <img src="/images/poisoned-rift.png" loading="lazy" alt="" class="image-styling">
-          </a>
-          <a href="" target="_blank" class="icard">
-            <img src="/images/blank_image.jpg" loading="lazy" alt="" class="image-styling">
-          </a>
-          <a href="" target="_blank" class="icard">
-            <img src="/images/blank_image.jpg" loading="lazy" alt="" class="image-styling">
-          </a>
-        </div>
-        <!-- SECOND -->
-        <div class="columns"> 
-          <a href="https://github.com/amiefeng/COSI116A-Fall24-Team4?tab=readme-ov-file" target="_blank" class="icard">
-            <img src="/images/information_visualization.png" loading="lazy" alt="" class="image-styling">
-          </a>
-          <a href="https://devpost.com/software/innovation-creek-youth-interactivity" target="_blank" class="icard">
-            <img src="/images/deishacks.png" loading="lazy" alt="" class="image-styling">
-          </a>
-          <a href="" target="_blank" class="icard">
-            <img src="/images/blank_image.jpg" loading="lazy" alt="" class="image-styling">
-          </a>
-        </div>
-        <!-- THIRD -->
-        <div class="columns"> 
-          <a href="https://www.figma.com/design/Ih2GvtIHWzFhLidNSJiYzF/Website-UI---Crownning-GAMES-(Mockup)?t=jp5WYvVElAfDLiUo-1" target="_blank" class="icard">
-            <img src="/images/crowninggames.png" loading="lazy" alt="" class="image-styling">
-          </a>
-          <a href="" target="_blank" class="icard">
-            <img src="/images/blank_image.jpg" loading="lazy" alt="" class="image-styling">
-          </a>
-          <a href="" target="_blank" class="icard">
-            <img src="/images/blank_image.jpg" loading="lazy" alt="" class="image-styling">
-          </a>
-        </div>
-      </div>
-    </div>
+          <!-- Selected Work -->
+          <div class="work_section" id="work">
+            <div class="work_header">
+              <span class="work_label">Selected work</span>
+              <span>03 projects</span>
+            </div>
 
-    <div class="footer-transition-fade"></div>
-    <div class="footer">
-      <div id="flower-animation">
-        <input id="rotation-checkbox" type="checkbox" class="rotator"> <label for="rotation-checkbox">spin</label>
-        <br>
-          <section role="region" area-hidden="true" class="flower">
-            <div class="flower-leaf leaf-1"></div>
-            <div class="flower-leaf leaf-2"></div>
-            <div class="flower-leaf leaf-3"></div>
-            <div class="flower-leaf leaf-4"></div>
-            <div class="flower-leaf leaf-5"></div>
-            <div class="flower-core"></div>
-          </section>
-      </div>
-    </div>
+            <!-- Projects -->
+            <div class="projects_list">
+              <a href="https://docs.google.com/presentation/d/1mpPMUuGycHNKSJBXgH8zB8gvrgxoXC5kJTNSGRigORE/edit?usp=sharing" target="_blank" class="project_row">
+                <div class="proj_left">
+                  <span class="proj_num">01</span>
+                  <div class="proj_title">Bronx Zoo Redesign</div>
+                  <div class="proj_desc">Redesigned for clearer navigation, easier exploration, and a flow built around the visitor to get them to the gate faster.</div>
+                </div>
+                <div class="proj_right">
+                  <span class="proj_arrow">↗</span>
+                  <div class="proj_tags">
+                    <span class="tag">UX Design</span>
+                    <span class="tag">Figma</span>
+                    <span class="tag">Usability testing</span>
+                    <span class="tag">Wireframing</span>
+                  </div>
+                </div>
+              </a>
 
+              <a href="https://www.figma.com/design/Ih2GvtIHWzFhLidNSJiYzF/Website-UI---Crownning-GAMES-(Mockup)?t=jp5WYvVElAfDLiUo-1" target="_blank" class="project_row">
+                <div class="proj_left">
+                  <span class="proj_num">02</span>
+                  <div class="proj_title">Crowning Games</div>
+                  <div class="proj_desc">Marketing site for an indie studio. Bright, immersive, and built to convert curious players into Kickstarter backers.</div>
+                </div>
+                <div class="proj_right">
+                  <span class="proj_arrow">↗</span>
+                  <div class="proj_tags">
+                    <span class="tag">Figma</span>
+                    <span class="tag">Web design</span>
+                  </div>
+                </div>
+              </a>
+
+              <a href="photos.html" target="_blank" class="project_row project_row--last">
+                <div class="proj_left">
+                  <span class="proj_num">03</span>
+                  <div class="proj_title">Through My Lens</div>
+                  <div class="proj_desc">My visual diary of moments I found worth keeping.</div>
+                </div>
+                <div class="proj_right">
+                  <span class="proj_arrow">↗</span>
+                  <div class="proj_tags">
+                    <span class="tag">digital</span>
+                    <span class="tag">photography</span>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        
+
+          <!-- About Section -->
+          <div class="about_section" id="about">
+
+            <div class="status">
+              <h3>
+                <span class="ripple-word" style="--delay: 0s">Exploring</span>
+                <span class="ripple-word" style="--delay: 0.25s">new</span>
+                <span class="ripple-word" style="--delay: 0.50s">opportunities.</span>
+              </h3>
+            </div>
+
+            <div class="bio-section">
+              <div class="bio-text">
+                <p>I studied Computer Science at Brandeis University where I fell in love with Frontend Development, and naturally User Experience Design followed. I care most about recreating that feeling of ease you get when interacting with beautiful and functional interfaces. <span>Effortless</span>.</p>
+              </div>
+              <div class="image">
+                <img src="/images/PromiseAdeliyi.png" alt="Profile Photo of Promise Adeliyi">
+              </div>
+            </div>
+
+            <div class="actions">
+              <a href="/files/resume.pdf" download="Promise_Adeliyi_Resume.pdf">Resume ↓</a>
+              <a href="mailto:promiseaadeliyi@gmail.com" id="email">promiseaadeliyi@gmail.com</a>
+              <a href="https://www.linkedin.com/in/promise-adeliyi/" target="_blank">LinkedIn</a>
+            </div>
+
+          </div>
+        </div>
   </body>
 </html>
