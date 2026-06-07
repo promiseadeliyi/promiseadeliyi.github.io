@@ -354,6 +354,7 @@ nav a {
 .actions {
   display: flex;
   gap: 1.25rem;
+  justify-content: space-between;
 }
 
 .actions a {
@@ -478,11 +479,12 @@ p span {
  
   .actions {
     flex-wrap: wrap;
-    gap: 12rem;
+    justify-content: space-between;
+    width: 100%;
   }
 
   #email {
-    display: none;
+    display: block;
   }
 }
  
