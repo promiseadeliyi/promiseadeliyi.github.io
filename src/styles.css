@@ -131,7 +131,7 @@ nav a {
 #name_title h1 {
   font-family: var(--fancy-font);
   font-size: 8rem;
-  font-weight: 520;
+  font-weight: 700;
   color: var(--accent-color);
   margin-bottom: 5px;
 }
@@ -317,6 +317,7 @@ nav a {
   line-height: 2.2;
   margin: 10px 0;
   letter-spacing: 0.08ch;
+  color: var( --dim-color);
 }
 
 .status h3 {
@@ -353,8 +354,8 @@ nav a {
 
 .actions {
   display: flex;
-  gap: 1.25rem;
   justify-content: space-between;
+  gap: 1.25rem;
 }
 
 .actions a {
@@ -375,6 +376,9 @@ p span {
   font-weight: 440;
 }
 
+#email_mobile {
+  display: none;
+}
 
 
 /* ── RESPONSIVE ── */
@@ -406,7 +410,7 @@ p span {
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 80px;
-    grid-row-gap: 40px;
+    row-gap: 40px;
   }
  
   #introduction {
@@ -475,16 +479,22 @@ p span {
  
   img {
     max-width: 100%;
+    width: 100%;
   }
  
   .actions {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    align-self: stretch
   }
 
   #email {
-    display: block;
+    display: none;
+  }
+
+  #email_mobile { 
+    display: inline; 
   }
 }
  
