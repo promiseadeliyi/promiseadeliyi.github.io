@@ -10,7 +10,7 @@
   --accent-color: #e072c7;
   --light-accent: #d395c5;
   --primary-color: #eae7ea;
-  --secondary-color: #5c5c60;
+  --secondary-color: #6f6f75;
   --dim-color: #aaa;
   --bright-color:#bbb;
 
@@ -232,7 +232,7 @@ nav a {
 
 .proj_title {
   font-family: var(--font-editorial);
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 300;
   font-style: italic;
   color: #fffeff;
@@ -241,7 +241,7 @@ nav a {
 
 .proj_desc {
   font-family: var(--font-family);
-  font-size: 13px;
+  font-size: 14px;
   color: var(--secondary-color);
   line-height: 1.65;
   max-width: 380px;
@@ -274,7 +274,7 @@ nav a {
 
 .tag {
   font-family: var(--font-family);
-  font-size: 11px;
+  font-size: 12px;
   color: #888;
   border: 0.5px solid rgba(92, 92, 96, 0.3);
   padding: 3px 9px;
